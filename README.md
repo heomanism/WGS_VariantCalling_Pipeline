@@ -1,6 +1,6 @@
-**## WGS Variant Calling Pipeline by R language**
-**
-#### Manual for XMEN made by Min Heo.**
+## WGS Variant Calling Pipeline by R language
+
+#### Manual for XMEN made by Min Heo.
 
 #### Pipeline Flow 
 
