@@ -11,29 +11,47 @@ idxPutYourThreadsNumber <- which(Args=="-t")
 idxPutYourTrimAdapter_Dir_ID <- which(Args=="-a")
 
 idxPutYourReferenceFile <- which(Args=="-R")
+
 idxPutYourReferenceIndexingFile <- which(Args=="-Ri")
+
 idxPutYourKnownSitesVCF <- which(Args=="-K")
 
 #### Unnecessary idx (have default value)
 idxTophred <- which(Args=="--p")
+
 idxMismatches <- which(Args=="--m")
+
 idxPalinClipThresh <- which(Args=="--pthr")
+
 idxSimpleClipThresh <- which(Args=="--sthr")
+
 idxLEADING <- which(Args=="--l")
+
 idxTRAILING <- which(Args=="--t")
+
 idxWindowsize <- which(Args=="--w")
+
 idxReQuiredQuality <- which(Args=="--q")
+
 idxMINLEN <- which(Args=="--ml")
 
 #### default value
 PutYourTophredNumber <- 33
+
 PutSeedMismatches <- 2
+
 PutPalindromClipThreshold <- 30
+
 PutSimpleClipThreshold <- 10
+
 PutLEADING <- 3
+
 PutTRAILING <- 3
+
 PutWindowsize <- 4
+
 PutReQuiredQuality <- 15
+
 PutMINLEN <- 36
 
 
