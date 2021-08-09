@@ -3,9 +3,13 @@
 
 #### Necessary idx (not have default value)
 idxVCF_pipeline_Directory <- which(Args=="-Dp")
+
 idxPutYoutFastqDir <- which(Args=="-Df")
+
 idxPutYourThreadsNumber <- which(Args=="-t")
+
 idxPutYourTrimAdapter_Dir_ID <- which(Args=="-a")
+
 idxPutYourReferenceFile <- which(Args=="-R")
 idxPutYourReferenceIndexingFile <- which(Args=="-Ri")
 idxPutYourKnownSitesVCF <- which(Args=="-K")
