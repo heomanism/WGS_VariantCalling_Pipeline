@@ -23,7 +23,7 @@
 
 -K: Puy your known sites for base recalibration.
 
-## Unnecessary idx (have default value,Values in () is default values for implementation , You should not enter these values.)
+## Unnecessary idx (have default value,Values in () is default values for implementation , You don't need to enter these values.)
 
 --p: Tophred number (33)
 
