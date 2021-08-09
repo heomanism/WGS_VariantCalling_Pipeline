@@ -1,7 +1,7 @@
 ## WGS Variant Calling Pipeline by R language
 
 
-#### Necessary idx (not have default value)
+#### Necessary idx (not have default value, You should enter these values.)
 idxVCF_pipeline_Directory <- which(Args=="-Dp")
 
 idxPutYoutFastqDir <- which(Args=="-Df")
@@ -16,7 +16,7 @@ idxPutYourReferenceIndexingFile <- which(Args=="-Ri")
 
 idxPutYourKnownSitesVCF <- which(Args=="-K")
 
-#### Unnecessary idx (have default value)
+#### Unnecessary idx (have default value, You should not enter these values.)
 idxTophred <- which(Args=="--p")
 
 idxMismatches <- which(Args=="--m")
