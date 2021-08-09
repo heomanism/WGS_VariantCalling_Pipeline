@@ -1,60 +1,47 @@
 ## WGS Variant Calling Pipeline by R language
 
+#### Manual for XMEN made by Min Heo.
 
-#### Necessary idx (not have default value, You should enter these values.)
-idxVCF_pipeline_Directory <- which(Args=="-Dp")
+#### Pipeline Flow 
 
-idxPutYoutFastqDir <- which(Args=="-Df")
+##### Trimmomatic -> fastQC -> BWA -> Samtools -> Picard -> GATK
 
-idxPutYourThreadsNumber <- which(Args=="-t")
+#### Inputs' index, if index is "-a", it is essential index, and if index is "--a", it is not essential, it has default value. If you want to change these values, you can change them.
 
-idxPutYourTrimAdapter_Dir_ID <- which(Args=="-a")
+### Necessary idx (not have default value, You should enter these values.)
+-Dp: Put your Variant Calling Pipeline directory which you want to store results.
 
-idxPutYourReferenceFile <- which(Args=="-R")
+-Df: Put your directory that includes fastq files(sample files).
 
-idxPutYourReferenceIndexingFile <- which(Args=="-Ri")
+-t: Put your threads number.
 
-idxPutYourKnownSitesVCF <- which(Args=="-K")
+-a: Put your adpater file for Trimmomatic.
 
-#### Unnecessary idx (have default value, You should not enter these values.)
-idxTophred <- which(Args=="--p")
+-R: Put your Reference file. 
 
-idxMismatches <- which(Args=="--m")
+-Ri: Put your Reference indexing file.
 
-idxPalinClipThresh <- which(Args=="--pthr")
+-K: Puy your known sites for base recalibration.
 
-idxSimpleClipThresh <- which(Args=="--sthr")
+#### Unnecessary idx (have default value,Values in () is default values for implementation , You should not enter these values.)
 
-idxLEADING <- which(Args=="--l")
+--p: Tophred number (33)
 
-idxTRAILING <- which(Args=="--t")
+--m: Trimmomatic's mismatch numbers (2)
 
-idxWindowsize <- which(Args=="--w")
+--pthr: Trimmomatic's Palindrome Clip Threshold (30)
 
-idxReQuiredQuality <- which(Args=="--q")
+--sthr: Trimmomatic's Simple Clip Threshold (10)
 
-idxMINLEN <- which(Args=="--ml")
+--l: Trimmomatic's Leading (3)
 
-#### default value
-PutYourTophredNumber <- 33
+--t: Trimmomatic's Trailing (3)
 
-PutSeedMismatches <- 2
+--w: Trimmomatic's Window Sliding Size (4)
 
-PutPalindromClipThreshold <- 30
+--q: Trimmomatic's requiredQuality (15)
 
-PutSimpleClipThreshold <- 10
+--ml: Trimmomatic's MINLENGTH (36)
 
-PutLEADING <- 3
-
-PutTRAILING <- 3
-
-PutWindowsize <- 4
-
-PutReQuiredQuality <- 15
-
-PutMINLEN <- 36
-
-
-
-#### Execution Code Example
+### Execution Code Example
 Rscript /home2/mheo/VariantCalling_Pipeline/PipelineTest_HM/XMEN_V1.R -Dp /home2/mheipelineTest_HM/XMEN.R -Dp /home2/mheo/VariantCalling_Pipeline/hi/ -Df /home2/mhe o/VariantCalling_Pipeline/PipelineTest_HM/Toydata/ -t 12 -a /data/Trimmomatic-0.933/adapters/TruSeq3-PE-2.fa -R /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta -Ri /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta.fai -K /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/dbsnp_151.hg19.vcf
