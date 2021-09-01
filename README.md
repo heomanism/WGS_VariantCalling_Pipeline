@@ -44,4 +44,4 @@
 --ml: Trimmomatic's MINLENGTH (36)
 
 ## Execution Code Example
-Rscript /home2/mheo/VariantCalling_Pipeline/PipelineTest_HM/XMEN_V1.R -Dp /home2/mheo/VariantCalling_Pipeline/hi/ -Df /home2/mheo/VariantCalling_Pipeline/PipelineTest_HM/Toydata/ -t 12 -a /data/Trimmomatic-0.933/adapters/TruSeq3-PE-2.fa -R /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta -Ri /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta.fai -K /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/dbsnp_151.hg19.vcf
+time Rscript /home2/mheo/VariantCalling_Pipeline/PipelineTest_HM/XMEN_V1.R -Dp /home2/mheo/VariantCalling_Pipeline/hi/ -Df /home2/mheo/VariantCalling_Pipeline/PipelineTest_HM/Toydata/ -t 12 -a /data/Trimmomatic-0.933/adapters/TruSeq3-PE-2.fa -R /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta -Ri /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/ucsc.hg19.chr.only.fasta.fai -K /home2/mheo/VariantCalling_Pipeline/Korea1K_VCF_example/0.Reference/hg19/dbsnp_151.hg19.vcf
